@@ -1,0 +1,56 @@
+<div class="banner">
+    <div class="container">
+        <div class="banner-bottom">
+
+            <div class="banner-bottom-right">
+                </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="shop">
+        </div>
+    </div>
+</div>
+<!-- content-section-starts-here -->
+<div class="container">
+    <div class="main-content">
+        <div class="products-grid">
+            <header>
+                <h3 class="head text-center">Latest Products</h3>
+            </header>
+            <a *ngFor="let item of items" [routerLink]="['/detail', item.id]">
+                <div class="col-md-4 product simpleCart_shelfItem text-center">
+
+                    <img [src]="item.imageName" alt="" />
+                    <div class="mask">
+                        <a href="single.html">Quick View</a>
+                    </div>
+                    <a class="product_name" href="single.html">{{item.name}}</a>
+                    <p><a class="item_add" href="#"> <span class="item_price">{{item.price}}</span></a></p>
+                    <br>
+                </div>
+            </a>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="container">
+        <div class="footer_top">
+            <div class="span_of_4">
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="copyright text-center">
+            <p>© 2016 TusenTakk.in. All Rights Reserved </p>
+        </div>
+    </div>
+</div>
+
+
+<!--
+Copyright 2016 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->

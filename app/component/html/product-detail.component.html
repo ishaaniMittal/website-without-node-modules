@@ -1,0 +1,72 @@
+<div *ngIf="item">
+    <div class="container">
+        <div class="products-page">
+            <div class="new-product">
+                <div class="dreamcrub">
+                    <ul class="breadcrumbs">
+                        <li class="home">
+                            <a href="index.html" title="Go to Home Page">Home</a>&nbsp;
+                            <span>&gt;</span>
+                        </li>
+
+                        <li class="home">
+                            Details
+                        </li>
+                    </ul>
+                    <ul class="previous">
+                        <li><a (click)="goBack()">Back to Previous Page</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-5 zoom-grid">
+                    <div class="flexslider">
+                        <img [src]="item.imageName" data-imagezoom="true" class="img-responsive" alt="" />
+                    </div>
+                </div>
+                <div class="col-md-offset-1 col-md-6 dress-info">
+                    <div class="dress-name">
+                        <h3>{{item.name}}</h3>
+                        <span>{{item.price}}</span>
+                        <div class="clearfix"></div>
+                        <p>{{item.description}}</p>
+
+                    </div>
+                    <div *ngIf="item.fabricType">
+                        <div class="span span3">
+                            <p class="left">Fabric Type</p>
+                            <p class="right">{{item.fabricType}}</p>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+    <!-- content-section-ends -->
+</div>
+
+<script>
+    // Can also be used with $(document).ready()
+    $(window).load(function () {
+        $('.flexslider').flexslider({
+            animation: "slide",
+            controlNav: "thumbnails"
+        });
+    });
+</script>
+
+<div class="footer">
+    <div class="container">
+        <div class="footer_top">
+            <div class="span_of_4">
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="copyright text-center">
+            <p>© 2016 TusenTakk.in. All Rights Reserved </p>
+        </div>
+    </div>
+</div>
